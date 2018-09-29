@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">DemoApp</string>
+    <string name="workText">Разработчик прикладного программного обеспечения</string>
+    <string name="personText">Мансур Бирюков, в мобильной разработке с 2014 года. На данный момент
+    работает в ООО "МетаПлатформа" разработчиком прикладного программного обеспечения, но находится
+    в процессе поиска работы мобильным разработчиком</string>
+    <string name="feedbackEThint">Может что-то хотите мне написать? (:</string>
+    <string name="sendButtonText">Отправить</string>
+    <string name="myEmail">e.l.e.638@yandex.ru</string>
+    <string name="emailSubject">Обратная связь</string>
+    <string name="myIG">https://instagram.com/_u/stdio__h</string>
+    <string name="instagram_package">com.instagram.android</string>
+    <string name="myTG">https://t.me/ele638</string>
+    <string name="telegram_package">org.telegram.messenger</string>
+    <string name="myVK">https://vk.com/rand0m1zed</string>
+    <string name="android_academy_text">Участник Android Academy MSK 2018</string>
+    <string name="about_caption">О разработчике</string>
+</resources>

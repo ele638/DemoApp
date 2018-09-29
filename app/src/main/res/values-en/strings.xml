@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DemoApp</string>
+    <string name="workText">РApplication software developer</string>
+    <string name="personText">Mansur Biryukov, in mobile development since 2014. At the moment
+        works in OOO "Metaplatform" developer of application software, but
+        in process of finding job search by a mobile developer</string>
+    <string name="feedbackEThint">Wanna to tell me something? :)</string>
+    <string name="sendButtonText">Send</string>
+    <string name="myEmail">e.l.e.638@yandex.ru</string>
+    <string name="emailSubject">Feedback</string>
+    <string name="myIG">https://instagram.com/_u/stdio__h</string>
+    <string name="instagram_package">com.instagram.android</string>
+    <string name="myTG">https://t.me/ele638</string>
+    <string name="telegram_package">org.telegram.messenger</string>
+    <string name="myVK">https://vk.com/rand0m1zed</string>
+    <string name="android_academy_text">Unit of Android Academy MSK 2018</string>
+    <string name="about_caption">About developer</string>
+</resources>

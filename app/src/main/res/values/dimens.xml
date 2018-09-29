@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mainLinearMarginStart">50dp</dimen>
+    <dimen name="icon_size">28dp</dimen>
+    <dimen name="textViewPadding">8dp</dimen>
+    <dimen name="mainLinearMarginEnd">12dp</dimen>
+</resources>
