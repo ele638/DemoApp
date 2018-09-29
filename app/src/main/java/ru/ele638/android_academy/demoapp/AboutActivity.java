@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.View;
@@ -30,8 +31,11 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        getSupportActionBar().setTitle(R.string.about_caption);
+
+        if (toolbar != null ) toolbar.setTitle(R.string.about_caption);
         emailText = findViewById(R.id.sendEmailET);
         findViewById(R.id.sendEmailBtn).setOnClickListener(this);
         findViewById(R.id.btnIG).setOnClickListener(this);
