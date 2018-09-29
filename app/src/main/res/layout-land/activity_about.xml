@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ /**
+  ~  * Created by Mansur Biryukov on 9/29/18 5:10 AM
+  ~  * Copyright (c) 2018 . All rights reserved.
+  ~  * Last modified 9/29/18 4:42 AM
+  ~  */
+  -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -149,6 +157,12 @@
                         android:scaleType="fitCenter"
                         android:src="@drawable/vk" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/copyrightSize"
+                    android:text="@string/copyright"/>
             </LinearLayout>
 
 

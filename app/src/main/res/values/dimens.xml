@@ -4,4 +4,5 @@
     <dimen name="icon_size">28dp</dimen>
     <dimen name="textViewPadding">8dp</dimen>
     <dimen name="mainLinearMarginEnd">12dp</dimen>
+    <dimen name="copyrightSize">10sp</dimen>
 </resources>

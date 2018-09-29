@@ -1,3 +1,11 @@
+/*
+ * *
+ *  * Created by Mansur Biryukov on 9/29/18 5:08 AM
+ *  * Copyright (c) 2018 . All rights reserved.
+ *  * Last modified 9/29/18 5:06 AM
+ *
+ */
+
 package ru.ele638.android_academy.demoapp;
 
 import android.content.ActivityNotFoundException;
