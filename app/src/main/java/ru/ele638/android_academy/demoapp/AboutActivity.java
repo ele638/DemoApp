@@ -35,7 +35,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
         setSupportActionBar(toolbar);
 
 
-        if (toolbar != null ) toolbar.setTitle(R.string.about_caption);
+        if (getSupportActionBar() != null ) getSupportActionBar().setTitle(R.string.about_caption);
         emailText = findViewById(R.id.sendEmailET);
         findViewById(R.id.sendEmailBtn).setOnClickListener(this);
         findViewById(R.id.btnIG).setOnClickListener(this);
