@@ -4,4 +4,12 @@
     <dimen name="icon_size">28dp</dimen>
     <dimen name="textViewPadding">8dp</dimen>
     <dimen name="mainLinearMarginEnd">12dp</dimen>
+    <dimen name="copyrightSize">10sp</dimen>
+    <dimen name="app_bar_height">250dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="defaultMargin">3dp</dimen>
+    <dimen name="cardView_margin_port">4dp</dimen>
+    <dimen name="cardView_margin_land">2dp</dimen>
+    <dimen name="cardView_marginTop">8dp</dimen>
 </resources>

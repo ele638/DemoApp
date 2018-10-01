@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /**
+  ~  * Created by Mansur Biryukov on 9/30/18 11:46 PM
+  ~  * Copyright (c) 2018 . All rights reserved.
+  ~  * Last modified 9/30/18 11:46 PM
+  ~  */
+  -->
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RVCV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/cardView_margin_port"
+    android:layout_marginTop="@dimen/cardView_marginTop"
+    android:layout_marginEnd="@dimen/cardView_margin_port"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/defaultMargin">
+
+        <TextView
+            android:id="@+id/RVRowCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/defaultMargin"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            tools:text="Category" />
+
+        <TextView
+            android:id="@+id/RVRowTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RVRowCategory"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/RVRowImage"
+            android:padding="@dimen/defaultMargin"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:transitionName="titleTrasition"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/RVRowBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RVRowTitle"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/RVRowImage"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="@dimen/defaultMargin"
+            android:textColor="@android:color/black"
+            tools:text="Body" />
+
+        <TextView
+            android:id="@+id/RVRowDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/RVRowBody"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="@dimen/defaultMargin"
+            android:textAllCaps="false"
+            android:transitionName="dateTimeTrasition"
+            tools:text="DateTime" />
+
+        <ImageView
+            android:id="@+id/RVRowImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@id/RVRowDateTime"
+            android:layout_below="@id/RVRowCategory"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerCrop"
+            android:transitionName="imageTrasition"
+            tools:src="@tools:sample/avatars" />
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

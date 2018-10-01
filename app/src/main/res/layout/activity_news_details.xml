@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
   ~ /**
-  ~  * Created by Mansur Biryukov on 9/29/18 5:26 AM
+  ~  * Created by Mansur Biryukov on 10/1/18 2:47 AM
   ~  * Copyright (c) 2018 . All rights reserved.
-  ~  * Last modified 9/29/18 5:26 AM
+  ~  * Last modified 10/1/18 2:47 AM
   ~  */
   -->
 
@@ -12,14 +12,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".AboutActivity">
+    android:theme="@style/AppTheme"
+    tools:context=".NewsDetailsActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
         android:fitsSystemWindows="true"
-        android:theme="@style/AppBarOverlay">
+        android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
@@ -31,23 +32,24 @@
             app:toolbarId="@+id/toolbar">
 
             <ImageView
+                android:id="@+id/newsDetailImage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/avatar" />
+                android:scaleType="fitStart"
+                android:transitionName="imageTrasition"
+                tools:src="@drawable/avatar" />
 
             <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/newsDetailToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/PopupOverlay" />
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/nested" />
+    <include layout="@layout/content_news_details" />
 
 </android.support.design.widget.CoordinatorLayout>
-
-

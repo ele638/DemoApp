@@ -1,15 +1,23 @@
+/*
+ * *
+ *  * Created by Mansur Biryukov on 9/29/18 5:08 AM
+ *  * Copyright (c) 2018 . All rights reserved.
+ *  * Last modified 9/29/18 5:06 AM
+ *
+ */
+
 package ru.ele638.android_academy.demoapp;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.InputType;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -21,9 +29,11 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
 
-        getSupportActionBar().setTitle(R.string.about_caption);
+        if (getSupportActionBar() != null) getSupportActionBar().setTitle(R.string.about_caption);
         emailText = findViewById(R.id.sendEmailET);
         findViewById(R.id.sendEmailBtn).setOnClickListener(this);
         findViewById(R.id.btnIG).setOnClickListener(this);

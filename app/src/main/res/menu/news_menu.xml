@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /**
+  ~  * Created by Mansur Biryukov on 9/30/18 3:06 AM
+  ~  * Copyright (c) 2018 . All rights reserved.
+  ~  * Last modified 9/30/18 3:06 AM
+  ~  */
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/aboutMenu"
+        android:title="@string/aboutMenuTitle"
+        app:showAsAction="never" />
+</menu>
