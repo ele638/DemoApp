@@ -10,19 +10,17 @@ package ru.ele638.android_academy.demoapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ImageView;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class NewsListActivity extends AppCompatActivity implements MyItemClickListner {
 
@@ -34,7 +32,7 @@ public class NewsListActivity extends AppCompatActivity implements MyItemClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_list);
-        android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbarNewsList);
+        Toolbar toolbar = findViewById(R.id.toolbarNewsList);
         setSupportActionBar(toolbar);
 
         recyclerView = findViewById(R.id.newsRV);
@@ -70,13 +68,13 @@ public class NewsListActivity extends AppCompatActivity implements MyItemClickLi
         intent.putExtra("Caption", item.getTitle());
         intent.putExtra("Body", item.getFullText());
         intent.putExtra("DateTime", new SimpleDateFormat("dd.MM.yyyy HH:mm", Locale.getDefault()).format(item.getPublishDate()));
-        Pair<View, String> shared2 = new Pair<>((View) imageView, ViewCompat.getTransitionName(imageView));
+        /* Pair<View, String> shared2 = new Pair<>((View) imageView, ViewCompat.getTransitionName(imageView));
 
 
         ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(
                 this, imageView, ViewCompat.getTransitionName(imageView)
-        );
+        ); */
 
-        startActivity(intent, optionsCompat.toBundle());
+        startActivity(intent);
     }
 }
