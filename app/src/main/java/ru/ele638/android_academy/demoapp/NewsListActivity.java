@@ -12,7 +12,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -27,6 +29,7 @@ public class NewsListActivity extends AppCompatActivity implements MyItemClickLi
     RecyclerView recyclerView;
     MyAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
+    static ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +43,7 @@ public class NewsListActivity extends AppCompatActivity implements MyItemClickLi
         layoutManager = new GridLayoutManager(this, getResources().getConfiguration().orientation);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
+        progressBar = findViewById(R.id.newsPB);
 
     }
 
@@ -76,5 +79,9 @@ public class NewsListActivity extends AppCompatActivity implements MyItemClickLi
         ); */
 
         startActivity(intent);
+    }
+
+    public static void hidePB() {
+        progressBar.setVisibility(View.GONE);
     }
 }

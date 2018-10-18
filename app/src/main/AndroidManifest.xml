@@ -28,7 +28,13 @@
         <activity
             android:name=".NewsDetailsActivity"
             android:label="@string/title_activity_news_details"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ThreadActivity"
+            android:label="ThreadActivity"
+            android:theme="@style/AppTheme">
+
+        </activity>
     </application>
 
 </manifest>

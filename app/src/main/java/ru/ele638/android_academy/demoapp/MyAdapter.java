@@ -18,11 +18,16 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by ele638 on 30/09/2018.
@@ -30,12 +35,39 @@ import androidx.recyclerview.widget.RecyclerView;
  */
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private List<NewsItem> newsItems;
+    private static List<NewsItem> newsItems;
     private Context ctx;
     private MyItemClickListner myListener;
 
     MyAdapter(Context context, MyItemClickListner listener) {
-        newsItems = DataUtils.generateNews();
+        newsItems = new ArrayList<>();
+
+        DataUtils.generateNews()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<List<NewsItem>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(List<NewsItem> inNewsItems) {
+                        newsItems = inNewsItems;
+                        NewsListActivity.hidePB();
+                        notifyDataSetChanged();
+                    }
+
+
+                    @Override
+                    public void onError(Throwable e) {
+                        e.printStackTrace();
+                    }
+
+                    @Override
+                    public void onComplete() {
+                    }
+                });
         ctx = context;
         myListener = listener;
     }
