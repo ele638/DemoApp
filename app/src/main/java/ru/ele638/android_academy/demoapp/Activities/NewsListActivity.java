@@ -6,7 +6,7 @@
  *
  */
 
-package ru.ele638.android_academy.demoapp;
+package ru.ele638.android_academy.demoapp.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,13 +23,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import ru.ele638.android_academy.demoapp.Data.MyAdapter;
+import ru.ele638.android_academy.demoapp.MyItemClickListner;
+import ru.ele638.android_academy.demoapp.Data.NewsItem;
+import ru.ele638.android_academy.demoapp.R;
 
 public class NewsListActivity extends AppCompatActivity implements MyItemClickListner {
 
     RecyclerView recyclerView;
     MyAdapter adapter;
     RecyclerView.LayoutManager layoutManager;
-    static ProgressBar progressBar;
+    ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,8 @@ public class NewsListActivity extends AppCompatActivity implements MyItemClickLi
         setContentView(R.layout.activity_news_list);
         Toolbar toolbar = findViewById(R.id.toolbarNewsList);
         setSupportActionBar(toolbar);
+
+
 
         recyclerView = findViewById(R.id.newsRV);
         adapter = new MyAdapter(this, this);
@@ -81,7 +88,4 @@ public class NewsListActivity extends AppCompatActivity implements MyItemClickLi
         startActivity(intent);
     }
 
-    public static void hidePB() {
-        progressBar.setVisibility(View.GONE);
-    }
 }

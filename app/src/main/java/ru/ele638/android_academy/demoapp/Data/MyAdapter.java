@@ -6,7 +6,7 @@
  *
  */
 
-package ru.ele638.android_academy.demoapp;
+package ru.ele638.android_academy.demoapp.Data;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -28,6 +28,11 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
+import retrofit2.Retrofit;
+import ru.ele638.android_academy.demoapp.Activities.NewsListActivity;
+import ru.ele638.android_academy.demoapp.MyItemClickListner;
+import ru.ele638.android_academy.demoapp.Network.RestAPI;
+import ru.ele638.android_academy.demoapp.R;
 
 /**
  * Created by ele638 on 30/09/2018.
@@ -39,8 +44,18 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private Context ctx;
     private MyItemClickListner myListener;
 
-    MyAdapter(Context context, MyItemClickListner listener) {
+
+
+    public MyAdapter(Context context, MyItemClickListner listener) {
         newsItems = new ArrayList<>();
+
+
+        Disposable news = RestAPI.getInstance()
+                .getAllNews()
+                .getAllNews()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe();
 
         DataUtils.generateNews()
                 .subscribeOn(Schedulers.io())
@@ -54,7 +69,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
                     @Override
                     public void onNext(List<NewsItem> inNewsItems) {
                         newsItems = inNewsItems;
-                        NewsListActivity.hidePB();
                         notifyDataSetChanged();
                     }
 

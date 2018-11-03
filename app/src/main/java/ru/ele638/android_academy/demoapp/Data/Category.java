@@ -6,7 +6,7 @@
  *
  */
 
-package ru.ele638.android_academy.demoapp;
+package ru.ele638.android_academy.demoapp.Data;
 
 /**
  * Created by ele638 on 30/09/2018.

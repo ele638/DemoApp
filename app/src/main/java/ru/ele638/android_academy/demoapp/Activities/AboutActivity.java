@@ -6,7 +6,7 @@
  *
  */
 
-package ru.ele638.android_academy.demoapp;
+package ru.ele638.android_academy.demoapp.Activities;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import ru.ele638.android_academy.demoapp.R;
 
 public class AboutActivity extends AppCompatActivity implements View.OnClickListener, TextView.OnEditorActionListener {
 

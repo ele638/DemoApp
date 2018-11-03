@@ -1,8 +1,9 @@
-package ru.ele638.android_academy.demoapp;
+package ru.ele638.android_academy.demoapp.Activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import ru.ele638.android_academy.demoapp.R;
 
 public class ThreadActivity extends AppCompatActivity {
     static Boolean side = false;

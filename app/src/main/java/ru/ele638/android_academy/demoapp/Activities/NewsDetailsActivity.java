@@ -6,7 +6,7 @@
  *
  */
 
-package ru.ele638.android_academy.demoapp;
+package ru.ele638.android_academy.demoapp.Activities;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -22,6 +22,7 @@ import com.bumptech.glide.request.target.Target;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import ru.ele638.android_academy.demoapp.R;
 
 public class NewsDetailsActivity extends AppCompatActivity {
 

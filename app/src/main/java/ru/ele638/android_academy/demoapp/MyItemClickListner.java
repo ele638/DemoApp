@@ -10,11 +10,13 @@ package ru.ele638.android_academy.demoapp;
 
 import android.widget.ImageView;
 
+import ru.ele638.android_academy.demoapp.Data.NewsItem;
+
 /**
  * Created by ele638 on 01/10/2018.
  * ele638@gmail.com
  */
-interface MyItemClickListner {
+public interface MyItemClickListner {
 
     void onClick(NewsItem item, ImageView imageView);
 }

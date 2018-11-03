@@ -13,7 +13,7 @@
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:theme="@style/AppTheme"
-    tools:context=".NewsListActivity">
+    tools:context=".Activities.NewsListActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -25,12 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
     </com.google.android.material.appbar.AppBarLayout>
-
-    <ProgressBar
-        android:id="@+id/newsPB"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/defaultMargin" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/newsRV"
